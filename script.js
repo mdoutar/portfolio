@@ -32,3 +32,33 @@ window.addEventListener('blur', function() {
 window.addEventListener('focus', function() {
     document.title = originalTitle;
 });
+
+
+const headerButtons = document.querySelectorAll("header a");
+
+
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(sec => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 100;
+    const height = sec.offsetHeight;
+
+    if (top >= offset && top < offset + height) {
+      current = sec.getAttribute("id");
+      
+    }
+  });
+
+  headerButtons.forEach(btn => {
+    btn.classList.remove("focus");
+    if (btn.name === current ) {
+        
+      btn.classList.add("focus");
+    }
+  });
+});
