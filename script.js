@@ -1,15 +1,18 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const typingElement = document.getElementById('typing-name');
+    const typingElement = document.getElementsByClassName('typing-name');
     const text = 'Mohamed Amine Doutar';
     let index = 0;
-    typingElement.textContent = ''; 
+    
+    typingElement[0].textContent = ''; 
+    typingElement[1].textContent = ''; 
     function typeWriter() {
         if (index < text.length) {
-            typingElement.textContent += text.charAt(index);
+            typingElement[0].textContent += text.charAt(index);
+            typingElement[1].textContent += text.charAt(index);
             index++;
-            setTimeout(typeWriter, 150); // Adjust speed (150ms per character)
+            setTimeout(typeWriter, 150); 
         }
     }
     typeWriter();

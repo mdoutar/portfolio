@@ -53,11 +53,15 @@ a:hover {
 }
 
 header {
-    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    padding: 0.7rem 1rem ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background-color: var(--scd-bg);
+    z-index: 10;
 }
 
 header .title {
@@ -72,12 +76,13 @@ nav ul {
 }
 
 main {
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
 }
 
 main section {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     display: flex;
     flex-direction: column;
     animation: fadeIn 1s ease-in-out;
