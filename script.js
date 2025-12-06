@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const typingElement = document.getElementsByClassName('typing-name');
     const text = 'Mohamed Amine Doutar';
 
-    function startTyping() {
+    // function startTyping() {
         let index = 0;
         typingElement[0].textContent = '';
         typingElement[1].textContent = '';
@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         typeWriter();
-    }
+    // }
 
-    startTyping();
-    setInterval(startTyping, 2000 + text.length * 150);
+    // startTyping();
+    // setInterval(startTyping, 20000 + text.length * 150);
 });
 
 const originalTitle = document.title;
