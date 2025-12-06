@@ -1,25 +1,30 @@
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const typingElement = document.getElementsByClassName('typing-name');
     const text = 'Mohamed Amine Doutar';
-    function typing(){
 
-      let index = 0;
-      typingElement[0].textContent = ''; 
-      typingElement[1].textContent = ''; 
-      function typeWriter() {
-        if (index < text.length) {
-          typingElement[0].textContent += text.charAt(index);
-          typingElement[1].textContent += text.charAt(index);
-          index++;
-          setTimeout(typeWriter, 150); 
+    function startTyping() {
+        let index = 0;
+        typingElement[0].textContent = '';
+        typingElement[1].textContent = '';
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingElement[0].textContent += text.charAt(index);
+                typingElement[1].textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 150);
+            }
         }
-      }
-      typeWriter();
+
+        typeWriter();
     }
-    setInterval(typing, text.length * 150);
+
+    startTyping();
+    setInterval(startTyping, 2000 + text.length * 150);
 });
+
 const originalTitle = document.title;
 const awayTitle = 'come back I miss you :>';
 document.addEventListener('visibilitychange', function() {
