@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     typeWriter();
 });
 const originalTitle = document.title;
-const awayTitle = 'come back to know more about me :>';
+const awayTitle = 'coem back I miss you :>';
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         document.title = awayTitle;
